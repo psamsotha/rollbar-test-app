@@ -29,9 +29,10 @@ public class TestResource {
     @GET
     @Path("wae")
     public String getWae(@QueryParam("error") Flag error) {
-        if (error.isPresent()) {
-            throw new WebApplicationException("error from WAE resource.", 500);
-        }
+//  Commented out to test GitHub Issues integration
+//        if (error.isPresent()) {
+//            throw new WebApplicationException("error from WAE resource.", 500);
+//        }
         return "OK from WAE resource.\n";
     }
 
