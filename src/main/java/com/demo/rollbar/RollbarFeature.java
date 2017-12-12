@@ -27,6 +27,7 @@ public class RollbarFeature implements Feature {
 
         Config config = ConfigBuilder.withAccessToken(accessToken)
                 .environment(getEnv())
+                .accessToken(accessToken)
                 .build();
         Rollbar rollbar = new Rollbar(config);
 
